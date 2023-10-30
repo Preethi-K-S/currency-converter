@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency converter</title>
+    <style>
+     *{
+        margin: 0px;
+        padding: 0px;
+       
+     }
+     body{
+        background-color: rgb(164, 247, 247);
+     }
+     #first{
+        border: 5px solid black;
+        width: 350px;
+        height: 400px;
+        text-align: center;
+        margin: auto;
+        margin-top: 45px;
+        padding:40px ;
+        background-color: rgb(141, 236, 236);
+        border-radius: 9px 9px;
+     }
+     h1{
+        font-size: 40px;
+      
+        
+     }
+     input{
+        font-size: 25px;
+        background-color: white;
+        margin-top: 50px;
+        padding: 5px;
+        text-align: center;
+     }
+     button{
+        font-size: 30px;
+        border-radius: 7px 7px ;
+        padding: 8px;
+        margin-top: 30px;
+     }
+     #result{
+        font-size: 30px;
+        font-weight: bolder;
+        margin-top: 20px;
+     }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <h1>currency converter</h1>
+        <div>
+            <input type="text" id="ans" placeholder="enter Indian currency">
+        </div>
+        <div>
+            <button type="submit" onclick="convert()" >convert</button>
+        </div>
+      <div id="result">
+
+      </div>
+    </div>
+    
+</body>
+<script>
+    function convert(){
+    let a=Number(document.getElementById("ans").value)
+    let value1=a/83.2500
+    let res=document.getElementById("result")
+    res.innerHTML=value1.toFixed(3)+" USD"
+    }
+</script>
+</html>
